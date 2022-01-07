@@ -2,15 +2,41 @@ import './App.css';
 import pecan from './res/logo_pecan.png';
 import logoText from './res/logo_text.png';
 
-const eveSsoIcon = "https://web.ccpgamescdn.com/eveonlineassets/developers/eve-sso-login-black-large.png"
+const eveSsoIcon = "https://web.ccpgamescdn.com/eveonlineassets/developers/eve-sso-login-white-large.png"
 const callback = "https://bbqpot.github.io/pecan-bot";
 const clientID = "455cc59662854ca0a70468886aa951b4";
 const ssoScope = "esi-mail.organize_mail.v1 esi-mail.read_mail.v1 esi-mail.send_mail.v1";
 const state = "pecanKlutz";
 
+function getQueryVariable(variable)
+{
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+                    var pair = vars[i].split("=");
+        if(pair[0] == variable){return pair[1];}
+         }
+         return(false);
+}
+let tokenState = Boolean(getQueryVariable("state") == "pecanKlutz");
+let token = getQueryVariable("code");
+
 function App() {
+    if (!tokenState) return <EveSSO/>;
+    else return;
+}
+
+function MailPage() {
     return (
-        <EveSSO/>
+        <div className="App">
+            <header className="App-header">
+                <img src={pecan} className="App-logo" alt="logo" />
+                <img src={logoText} />
+                <p>
+                    Please login using EVE SSO.
+                </p>
+            </header>
+        </div>
     );
 }
 
