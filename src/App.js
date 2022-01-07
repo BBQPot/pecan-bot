@@ -23,7 +23,7 @@ let token = getQueryVariable("code");
 
 function App() {
     if (!tokenState) return <EveSSO/>;
-    else return;
+    else return <MailPage/>;
 }
 
 function MailPage() {
@@ -58,8 +58,6 @@ function EveSSO() {
                 <a
                     className="App-link"
                     href={ssoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
                 >
                 <img src={eveSsoIcon} className="EVE-SSO" />
                 </a>
