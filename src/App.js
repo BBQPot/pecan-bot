@@ -3,7 +3,7 @@ import pecan from './res/logo_pecan.png';
 import logoText from './res/logo_text.png';
 
 const eveSsoIcon = "https://web.ccpgamescdn.com/eveonlineassets/developers/eve-sso-login-black-large.png"
-const callback = "https://bbqpot.github.io/pecan-bot/callback";
+const callback = "https://bbqpot.github.io/pecan-bot";
 const clientID = "455cc59662854ca0a70468886aa951b4";
 const ssoScope = "esi-mail.organize_mail.v1 esi-mail.read_mail.v1 esi-mail.send_mail.v1";
 const state = "pecanKlutz";
