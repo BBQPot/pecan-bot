@@ -1,6 +1,8 @@
 import './App.css';
 import pecan from './res/logo_pecan.png';
 import logoText from './res/logo_text.png';
+import { Checkbox, FormGroup, FormControlLabel, FormControl, FormLabel, Radio, RadioGroup} from '@mui/material';
+import * as React from 'react';
 
 const eveSsoIcon = "https://web.ccpgamescdn.com/eveonlineassets/developers/eve-sso-login-white-large.png"
 const callback = "https://bbqpot.github.io/pecan-bot";
@@ -27,16 +29,30 @@ function App() {
 }
 
 function MailPage() {
+    const [srpStatus, setSrpStatus] = React.useState("rejected");
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={pecan} className="App-logo" alt="logo" />
-                <img src={logoText} />
-                <p>
-                    Please login using EVE SSO.
-                </p>
-            </header>
-        </div>
+        <body>
+            <div className="App-title">
+                 <img src = {pecan} className="App-logo-small"/>
+                 <img src = {logoText} className="App-logo-small"/>
+            </div>
+            <div id="body" className="App-body">
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">SRP Status</FormLabel>
+                    <RadioGroup
+                        row
+                        aria-label="srp-status"
+                        defaultValue="rejected"
+                        onChange={(event) => setSrpStatus(event.target.value)}
+                    >
+                        <FormControlLabel value="rejected" control={<Radio />} label="Rejected" />
+                        <FormControlLabel value="reduced" control={<Radio />} label="Reduced (50%)" />
+                        <FormControlLabel value="other" control={<Radio />} label="Other" />
+                    </RadioGroup>
+                </FormControl>
+                {srpStatus}
+            </div>
+        </body>
     );
 }
 

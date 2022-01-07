@@ -14,14 +14,47 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+.App-body {
+    background-color: #d3d3d3;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+}
+
+.App-title {
+    position: sticky;
+    top: 0px;
+    background-color: #282c34;
+    align-items: flex-start;
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    font-size: calc(20px + 2vmin);
+    color: white;
+}
+
+.App-logo-small {
+    height: 8vmin;
+    pointer-events: none;
+}
+
+.Selection {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
 }
 
 .App-link {
