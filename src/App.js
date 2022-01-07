@@ -17,11 +17,11 @@ function getQueryVariable(variable)
         var vars = query.split("&");
         for (var i=0;i<vars.length;i++) {
                     var pair = vars[i].split("=");
-        if(pair[0] == variable){return pair[1];}
+        if(pair[0] === variable){return pair[1];}
          }
          return(false);
 }
-let tokenState = Boolean(getQueryVariable("state") == "pecanKlutz");
+let tokenState = Boolean(getQueryVariable("state") === "pecanKlutz");
 let token = getQueryVariable("code");
 
 function App() {
@@ -41,8 +41,8 @@ function MailPage() {
     return (
         <body className="App-background">
             <div className="App-title">
-                 <img src = {pecan} className="App-logo-small"/>
-                 <img src = {logoText} className="App-logo-small"/>
+                 <img src = {pecan} className="App-logo-small" alt="logo"/>
+                 <img src = {logoText} className="App-logo-small" alt="logo"/>
             </div>
             <div className="App-body">
                 <Box className="Hori-style">
@@ -114,7 +114,7 @@ function EveSSO() {
         <div className="App">
             <header className="App-header">
                 <img src={pecan} className="App-logo" alt="logo" />
-                <img src={logoText} />
+                <img src={logoText} alt="logo"/>
                 <p>
                     Please login using EVE SSO.
                 </p>
@@ -122,7 +122,7 @@ function EveSSO() {
                     className="App-link"
                     href={ssoLink}
                 >
-                <img src={eveSsoIcon} className="EVE-SSO" />
+                <img src={eveSsoIcon} className="EVE-SSO" alt="logo"/>
                 </a>
             </header>
         </div>
