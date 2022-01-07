@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/pecan-bot/static/css/main.073c9b0a.css",
-    "main.js": "/pecan-bot/static/js/main.04295a3c.js",
+    "main.js": "/pecan-bot/static/js/main.b7bcf4e5.js",
     "static/js/787.43d87bb6.chunk.js": "/pecan-bot/static/js/787.43d87bb6.chunk.js",
     "index.html": "/pecan-bot/index.html",
     "main.073c9b0a.css.map": "/pecan-bot/static/css/main.073c9b0a.css.map",
-    "main.04295a3c.js.map": "/pecan-bot/static/js/main.04295a3c.js.map",
+    "main.b7bcf4e5.js.map": "/pecan-bot/static/js/main.b7bcf4e5.js.map",
     "787.43d87bb6.chunk.js.map": "/pecan-bot/static/js/787.43d87bb6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.04295a3c.js"
+    "static/js/main.b7bcf4e5.js"
   ]
 }
