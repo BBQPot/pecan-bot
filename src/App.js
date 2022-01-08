@@ -38,6 +38,7 @@ function MailPage() {
     const [srpSplit, setSrpSplit] = React.useState(false);
     const [srpEqip, setSrpEqip] = React.useState(false);
     const [recipient, setRecipient] = React.useState("");
+    const [zkblink, setZkblink] = React.useState("");
 
     return (
         <body className="App-background">
@@ -48,8 +49,16 @@ function MailPage() {
             <div className="App-body">
                 <Box className="Hori-style">
                     <Box className="Vertical-style" sx={{m:2}}>
-                        <TextField label="Recipient" variant="outlined" sx={{mb:2}}/>
-                        <TextField label="ZKB Link" variant="outlined"/>
+                        <TextField 
+                            onChange={(event) => setRecipient(event.target.value)}
+                            label="Recipient"
+                            variant="outlined"
+                            sx={{mb:2}}
+                        />
+                        <TextField 
+                            onChange={(event) => setZkblink(event.target.value)}
+                            label="ZKB Link"
+                            variant="outlined"/>
                     </Box>
                     <FormControl sx={{m:2}}>
                         <FormLabel component="legend">SRP Status</FormLabel>
@@ -86,7 +95,7 @@ function MailPage() {
                     </FormControl>
                 </Box>
                 <Box sx={{ width: '100%', maxWidth: 500, pt:2}}>
-                    <Typography> Your SRP application is {srpStatus} due to the following reason: </Typography>
+                    <Typography> Dear {recipient}, Your SRP application, {zkblink}, is {srpStatus} due to the following reason: </Typography>
                     <p/>
                     { srpPing && <Typography> Lack of or inaccurate ping info </Typography> }
                     { srpShip && <Typography> Unsuitable ship </Typography> }
