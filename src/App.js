@@ -1,5 +1,6 @@
 import './App.css';
 import pecan from './res/logo_pecan.png';
+import dueCourse from './res/in_due_course.png'
 import logoText from './res/logo_text.png';
 import { Button, TextField, Typography, Checkbox, FormGroup, FormControlLabel, FormControl, FormLabel, Radio, RadioGroup } from '@mui/material';
 import * as React from 'react';
@@ -41,8 +42,8 @@ function MailPage() {
     return (
         <body className="App-background">
             <div className="App-title">
-                 <img src = {pecan} className="App-logo-small" alt="logo"/>
-                 <img src = {logoText} className="App-logo-small" alt="logo"/>
+                <img src = {pecan} className="App-logo-small" alt="logo"/>
+                <img src = {logoText} className="App-logo-small" alt="logo"/>
             </div>
             <div className="App-body">
                 <Box className="Hori-style">
@@ -94,6 +95,14 @@ function MailPage() {
                     { srpEqip && <Typography> Lack of required ammunation/equipment in cabin </Typography> }
                     <p/>
                     <Typography> Should you have any questions, please contact the SRP team by replying this in-game mail. </Typography>
+                    <Box className="Hori-style">
+                        <Box margin="auto">
+                            <img src = {dueCourse} className="App-logo-small" alt="logo"/>
+                        </Box>
+                        <Typography sx={{m:2}}> Please be suggested that due to the high volume of SRP paper work, your compliant will be reviewed in due course, 
+                        at the appropriate juncture, in the fullness of time, when the moment is ripe, 
+                        when the necessary procedures have been completed.</Typography>
+                    </Box>
                 </Box>
                 <Button variant="contained" color="error">
                     Send!
