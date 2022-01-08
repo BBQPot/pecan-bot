@@ -94,7 +94,7 @@ function MailPage() {
                         </FormGroup>
                     </FormControl>
                 </Box>
-                <Box sx={{ width: '100%', maxWidth: 500, pt:2}}>
+                <Box sx={{ width: '100%', maxWidth: 625, pt:2}}>
                     <Typography> Dear {recipient}, Your SRP application, {zkblink}, is {srpStatus} due to the following reason: </Typography>
                     <p/>
                     { srpPing && <Typography> Lack of or inaccurate ping info </Typography> }
@@ -108,10 +108,12 @@ function MailPage() {
                         <Box margin="auto">
                             <img src = {dueCourse} className="App-logo-small" alt="logo"/>
                         </Box>
-                        <Typography sx={{m:2}}> Please be suggested that due to the high volume of SRP paper work, your compliant will be reviewed in due course, 
+                        <Typography sx={{m:2}}> Please be advised that due to the high volume of SRP paper work, your compliant will be reviewed in due course, 
                         at the appropriate juncture, in the fullness of time, when the moment is ripe, 
-                        when the necessary procedures have been completed.</Typography>
+                        and when the necessary procedures have been completed.</Typography>
                     </Box>
+                    <Typography> Yours most sincerely,</Typography>
+                    <Typography> Sir Srp Team Appleby</Typography>
                 </Box>
                 <Button variant="contained" color="error">
                     Send!
